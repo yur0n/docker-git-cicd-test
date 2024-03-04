@@ -1,4 +1,4 @@
-name: ${{ github.event.repository.name }}
+name: docker-git-cicd-test
 
 on: 
   push:
@@ -28,4 +28,4 @@ jobs:
               context: .
               push: true
               target: prod
-              tags: ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
+              tags: ${{ secrets.DOCKER_USERNAME }}/docker-git-cicd-test:latest
