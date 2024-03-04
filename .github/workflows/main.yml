@@ -26,6 +26,6 @@ jobs:
             uses: docker/build-push-action@v5
             with:
               context: .
-              file: ./compose.yaml
               push: true
-              tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
+              target: prod
+              tags: ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
