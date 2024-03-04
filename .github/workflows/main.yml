@@ -1,4 +1,4 @@
-name: ci
+name: ${{ github.event.repository.name }}
 
 on: 
   push:
@@ -28,4 +28,4 @@ jobs:
               context: .
               push: true
               target: prod
-              tags: ${{ secrets.DOCKER_USERNAME }}:${{ secrets.DOCKER_USERNAME }}
+              tags: ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
