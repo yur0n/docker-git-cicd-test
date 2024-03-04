@@ -28,4 +28,4 @@ jobs:
               context: .
               push: true
               target: prod
-              tags: ${{ secrets.DOCKER_USERNAME }}/docker-git-cicd-test:latest
+              tags: ${{ secrets.DOCKER_USERNAME }}:latest
